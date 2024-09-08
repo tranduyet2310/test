@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.OrdersMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.Orders">
+        <id column="id" property="id" />
+        <result column="order_uid" property="orderUid" />
+        <result column="price" property="price" />
+        <result column="order_status" property="orderStatus" />
+        <result column="user_id" property="userId" />
+        <result column="delivery_id" property="deliveryId" />
+        <result column="date_created" property="dateCreated" />
+        <result column="date_updated" property="dateUpdated" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_uid, price, order_status, user_id, delivery_id, date_created, date_updated
+    </sql>
+
+</mapper>
